@@ -1,0 +1,4 @@
+name = fLDC Misc Module
+description = Developing as a Team example module
+core = 7.x
+package = DGC
