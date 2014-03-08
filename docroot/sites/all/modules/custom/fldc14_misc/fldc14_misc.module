@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * fldc14_misc.module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function fldc14_misc_menu() {
+  $items['fldc'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('fldc14_misc_example_form'),
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+
+/**
+ * Example form callback.
+ */
+function fldc14_misc_example_form($form, &$form_state) {
+  // @todo: add the reset of this form.
+
+  $form['actions'] = array(
+    '#type' => 'actions',
+  );
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+  return $form;
+}
