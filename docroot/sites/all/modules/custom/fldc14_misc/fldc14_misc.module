@@ -10,7 +10,7 @@
 function fldc14_misc_menu() {
   $items['fldc'] = array(
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('fldc_example_form'),
+    'page arguments' => array('fldc14_misc_example_form'),
     'access callback' => TRUE,
   );
   return $items;
@@ -19,9 +19,13 @@ function fldc14_misc_menu() {
 /**
  * Example form callback.
  */
-function fldc14_example_form($form, &$form_state) {
-  $form['submit'] = array(
+function fldc14_misc_example_form($form, &$form_state) {
+  // @todo: add the reset of this form.
+
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array(
     '#type' => 'submit',
-    '#value' => 'Submit',
+    '#value' => t('Save'),
   );
+  return $form;
 }
